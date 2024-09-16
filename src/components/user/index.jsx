@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function User({ name, status }) {
   return (
-    <div>
+    <div className={styles.container}>
       <h2>User Information</h2>
       <p>Name: {name}</p>
       <p>Status: {status}</p>

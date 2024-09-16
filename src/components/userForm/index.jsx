@@ -23,12 +23,13 @@ function UserForm({ name, status, setUserData }) {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Edit User Information</h2>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.form_container} onSubmit={handleSubmit}>
         <label>
           Name:
           <input
+            className={styles.input}
             value={user.name}
             onChange={handleChange}
             type="text"
@@ -38,13 +39,16 @@ function UserForm({ name, status, setUserData }) {
         <label>
           Status:
           <input
+            className={styles.input}
             value={user.status}
             onChange={handleChange}
             type="text"
             name="status"
           />
         </label>
-        <button type="submit">Save</button>
+        <button className={styles.btn_submit} type="submit">
+          Save
+        </button>
       </form>
     </div>
   );
